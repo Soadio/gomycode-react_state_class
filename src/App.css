@@ -3,3 +3,21 @@
   margin: 0 auto;
   padding: 24px;
 }
+
+article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 32px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  background-color: rgb(53, 50, 50);
+  box-shadow: 0 0 10px gray;
+  color: whitesmoke;
+}
+
+article img {
+  max-width: 150px;
+  aspect-ratio: 1;
+}
