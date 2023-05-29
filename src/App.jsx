@@ -2,22 +2,37 @@ import React from "react";
 import "./App.css";
 
 class App extends React.Component {
-  state = {
-    fullName: "Michael Peter",
-    bio: "otaku",
-    imgSrc: "/logo512.png",
-    profession: "Sofware Engineer",
-  };
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      fullName: "Michael Peter",
+      bio: "otaku",
+      imgSrc: "/logo512.png",
+      profession: "Sofware Engineer",
+      show: true,
+    };
+  }
+
+  handleClick(show) {
+    this.setState({ show: !show });
+  }
 
   render() {
     return (
       <main className="app">
-        <article>
-          <img src={this.state.imgSrc} alt="Photo" />
-          <h1>{this.state.fullName}</h1>
-          <p>{this.state.bio}</p>
-          <p>{this.state.profession}</p>
-        </article>
+        {this.state.show && (
+          <article>
+            <img src={this.state.imgSrc} alt="Photo" />
+            <h1>{this.state.fullName}</h1>
+            <p>{this.state.bio}</p>
+            <p>{this.state.profession}</p>
+          </article>
+        )}
+
+        <button onClick={() => this.handleClick(this.state.show)}>
+          {this.state.show ? "Hide details" : "Show details"}
+        </button>
       </main>
     );
   }
