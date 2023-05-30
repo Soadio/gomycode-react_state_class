@@ -6,10 +6,10 @@ class App extends React.Component {
     super(props);
 
     this.state = {
-      fullName: "Michael Peter",
-      bio: "otaku",
+      fullName: "Sheriff Adio",
+      bio: "ikeja",
       imgSrc: "/logo512.png",
-      profession: "Sofware Engineer",
+      profession: "Sofware Developer",
       show: true,
     };
   }
